@@ -8,5 +8,10 @@ const Filter = (update) => {
   container.append(input);
   input.append(searchIcon);
 
+  input.keyup(function(){
+   filterByDistrict(state.stations, $(this).val());
+
+  })
+
   return container;
 }
