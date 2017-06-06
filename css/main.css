@@ -17,3 +17,27 @@ header {
 header .fa-chevron-left {
   margin-right: 16px;
 }
+
+.input-container{
+  position: relative;
+  border-bottom: 1px solid black;
+  height: 70px;
+}
+
+.input-container input{
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  height: 30px;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.search-icon{
+  float: left;
+  margin-right: 6px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+}
