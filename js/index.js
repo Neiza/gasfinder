@@ -5,6 +5,9 @@ const render = (root) => {
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
   wrapper.append(Filter());
+  wrapper.append(StationsList());
+
+
 
   root.append(wrapper);
 }

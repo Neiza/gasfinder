@@ -1,16 +1,26 @@
 'use strict';
 
-const Options = (update) => {
-  const divCont = $("<div class='div-cont hide'></div>");
-  const div1 = $("<div class='div1'></div>");
-  const div2 = $("<div class='div2'></div>");
-  const div3 = $("<div class='div3'></div>");
-  const div4 = $("<div class='div4'></div>");
+const stationItem = (station, update) => {
+  const allStationsContainer = $('<div class="allStations-container"></div>');
+  const stations = $('<div class="stations"></div>');
+  stations.text(station.name + " " + station.address);
+  const mapIcon = $('<span class="fa fa-map" aria-hidden="true"></span>');
 
-  divCont.append(div1);
-  divCont.append(div2);
-  divCont.append(div3);
-  divCont.append(div4);
+  allStationsContainer.append(stations);
+  stations.append(mapIcon);
+  /* mapIcon.on('click',(e) => {
+    e.preventDefault();
+    state.selectedMovie = movie;
+    update();
+  }); */
+  return allStationsContainer;
+}
 
-  return divCont;
+const StationsList = (update) => {
+  const stationsContList = $('<div class="stationsContainer"></div>');
+  state.stations.forEach((station) => {
+    stationsContList.append(stationItem(station,update));
+  });
+
+  return stationsContList;
 }
