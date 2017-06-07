@@ -10,8 +10,6 @@ const Filter = (update) => {
 
   input.keyup(function(){
    filterByDistrict(state.stations, $(this).val());
-
   })
-
   return container;
 }
